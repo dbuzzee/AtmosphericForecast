@@ -1,0 +1,77 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  font-family: "EB Garamond", serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+#viewport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+#displayFrame {
+  box-sizing: border-box;
+  width: 264px;
+  height: 176px;
+  min-width: 264px;
+  min-height: 176px;
+  max-width: 264px;
+  max-height: 176px;
+
+  border: 1.5px solid #111;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 6px;
+  padding-bottom: 18px; 
+  flex: 0 0 auto;
+}
+
+#canvasWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 192px;
+  height: 192px;
+  transform: scale(0.95);
+  margin-top: -10px; 
+}
+
+canvas {
+  display: block;
+  width: 192px;
+  height: 192px;
+}
+
+#dataLine {
+  margin-top: 0.35rem;
+  font-size: 3rem !important; /* was 1.5rem — force override */
+  line-height: 1.2;
+  color: #111 !important;
+  text-align: center;
+  max-width: 180px;
+  white-space: nowrap;
+  transform: scale(1); /* prevent inherited scaling from parent */
+}
+
+
+#displayFrame,
+#canvasWrapper,
+canvas {
+  flex-shrink: 0;
+}
